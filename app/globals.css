@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 39 40% 94%;
+    --foreground: 0 0% 20%;
+    --card: 0 0% 78%;
+    --card-foreground: 228 24% 20%;
+    --primary: 186 91% 70%;
+    --primary-foreground: 228 24% 20%;
+    --blue-background: 228 24% 95%;
+    --blue-form: 228 100% 96%;
+    --blue-bar: 186 91% 80%;
+    --input: 225 33% 96%;
+    --border: 225 33% 88%;
+  }
+
+  .dark {
+    --background: 244 45% 12%;
+    --foreground: 228 24% 95%;
+    --card: 225 33% 15%;
+    --card-foreground: 228 24% 95%;
+    --primary: 186 91% 30%;
+    --primary-foreground: 228 24% 95%;
+    --blue-background: 228 24% 15%;
+    --blue-form: 225 33% 18%;
+    --blue-bar: 186 91% 40%;
+    --input: 225 33% 12%;
+    --border: 225 33% 22%;
+  }
+}
+
+body {
+  @apply bg-background text-foreground transition-colors duration-150;
+}
+
+/* Inputs and dropdowns visible */
+.form-surface {
+  @apply w-full rounded-md px-3 py-2 text-center shadow-sm transition-colors;
+  background-color: hsl(var(--input));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.form-surface:focus,
+.form-surface:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border-color: hsl(var(--border));
+}
+
+/* ✅ Red error only on invalid fields */
+.input-error {
+  border: 2px solid #ef4444;
+  background-color: hsl(var(--input));
+}
+
+.switch-hover {
+  @apply transition-all duration-150 ease-out;
+}
+
+.switch-hover:hover {
+  filter: brightness(1.25);
+}
+
+button {
+  @apply transition-all duration-150 ease-out;
+}
+
+button:hover {
+  @apply scale-[1.02] shadow-md;
+}
+
+@keyframes pulse-once {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-once {
+  animation: pulse-once 3s ease-in-out forwards;
+}
