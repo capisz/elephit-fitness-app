@@ -1,6 +1,6 @@
 # 🐘 Elephit Fitness App
 
-<img src='public/favicon.ico' width=100 /><img src='public/favicon.ico' width=100 /><img src='public/favicon.ico' width=100 /><img src='public/favicon.ico' width=100 />
+<img src='favicon_transparent.png' width=100 /><img src='favicon_transparent.png' width=100 /><img src='favicon_transparent.png' width=100 /><img src='favicon_transparent.png' width=100 />
 [![Built with React](https://img.shields.io/badge/Built%20with-React-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 [![Built with Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
